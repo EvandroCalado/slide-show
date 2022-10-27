@@ -13,6 +13,7 @@ const containerItems = document.querySelector("#container-items");
 const balls = document.querySelector(".balls");
 
 let slideAtual = "1";
+let rolar = true;
 
 const loadImages = (images, containerItems) => {
   images.forEach((image) => {
@@ -36,6 +37,7 @@ let items = document.querySelectorAll(".item");
 
 const next = () => {
   if (slideAtual < ball.length - 1) {
+    rolar = false;
     ball[slideAtual].classList.remove("active");
     slideAtual++;
     ball[slideAtual].classList.add("active");
@@ -50,6 +52,7 @@ const next = () => {
 };
 
 const previous = () => {
+  rolar = false;
   if (slideAtual == "0") {
     ball[slideAtual].classList.remove("active");
     slideAtual = ball.length - 1;
@@ -69,5 +72,9 @@ document.querySelector("#previous").addEventListener("click", previous);
 document.querySelector("#next").addEventListener("click", next);
 
 setInterval(() => {
-  next();
+  if (rolar) {
+    next();
+  } else {
+    rolar = true;
+  }
 }, 3000);
