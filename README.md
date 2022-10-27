@@ -1,4 +1,4 @@
-# slide-show
+# Slide Show
  Slide show em acompanhamento ao projeto do prof. Fernando Leonid no seu canal de youtube.<br/>
  Adicionei um time para o slide passar para o próximo automático.<br/>
  Adcionei as bolinhas que marcam em qual slide está e quantas imagens temos.<br/>
