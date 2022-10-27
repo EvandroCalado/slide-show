@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-slide {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  height: 70vh;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.container-items {
+  position: absolute;
+  display: flex;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item {
+  transition: all 500ms linear;
+}
+
+.item:first-child {
+  margin-left: -100%;
+}
+
+.item img {
+  width: 70vw;
+  height: 70vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.action-button {
+  font: bold 30px arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  color: #00000000;
+  user-select: none;
+  z-index: 1;
+}
+
+.action-button:hover:nth-child(1) {
+  color: white;
+  background-color: #00000055;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  transition: all 500ms linear;
+}
+
+.action-button:hover:nth-child(3) {
+  color: white;
+  background-color: #00000055;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: all 500ms linear;
+}
+
+.balls {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.ball:hover {
+  background-color: #fff;
+}
+
+.ball.active {
+  background-color: #fff;
+}
